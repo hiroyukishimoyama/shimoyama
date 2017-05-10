@@ -1,7 +1,7 @@
-#ƒf[ƒ^“ü—Í
+#ãƒ‡ãƒ¼ã‚¿å…¥åŠ›
 a = rnorm(20, mean=10, sd=2)
 
-#•W–{©ŒÈ‹¤•ªU
+#æ¨™æœ¬è‡ªå·±å…±åˆ†æ•£
 gamma0 = (length(a)-1)/length(a)*var(a)
 gamma1 = 0
 for(i in 2:length(a)){
@@ -9,18 +9,19 @@ for(i in 2:length(a)){
 }
 gamma1 = gamma1/length(a)
 
-#•W–{ƒRƒŒƒƒOƒ‰ƒ€
+#æ¨™æœ¬ã‚³ãƒ¬ãƒ­ã‚°ãƒ©ãƒ 
 ro0 = gamma1/gamma0
 
-#ƒ‚ƒfƒ‹‚Ìƒpƒ‰ƒ[ƒ^„’è
+#ãƒ¢ãƒ‡ãƒ«ã®ãƒ‘ãƒ©ãƒ¡ãƒ¼ã‚¿æ¨å®š
 fai1 <- ro0
 fai0 <- mean(a)*(1-fai1)
 
-#3‚Âæ‚Ü‚Å‚Ì„’è’l‚ğ“±o
+#3ã¤å…ˆã¾ã§ã®æ¨å®šå€¤ã‚’å°å‡º
 est1 = fai0+fai1*a[[length(a)]]
 est2 = fai0+fai1*est1
 est3 = fai0+fai1*est2
 
-#Œ‹‡‚µ‚Äƒvƒƒbƒg
+#çµåˆã—ã¦ãƒ—ãƒ­ãƒƒãƒˆ
 plot(c(a,est1,est2,est3))
 
+aa
